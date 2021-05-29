@@ -1,9 +1,9 @@
 <template>
-  <HelloWorld />
+  <h1>hahah</h1>
+  <router-view />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 
 </script>
 
