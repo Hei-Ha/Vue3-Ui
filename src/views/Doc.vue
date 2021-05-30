@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
     <Topnav class="nav" />
-    <div class="content" v-show="asideVisible">
-      <aside>
+    <div class="content">
+      <aside v-show="asideVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -89,7 +89,6 @@ aside {
       padding: 4px 0;
     }
   }
-
   //@media (max-width: 500px) {
   //  position: fixed;
   //  top: 0;
@@ -97,6 +96,7 @@ aside {
   //  padding-top: 70px;
   //}
 }
+
 main {
   overflow: auto;
 }
