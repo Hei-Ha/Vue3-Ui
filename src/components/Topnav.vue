@@ -1,0 +1,38 @@
+<template>
+  <div class="topnav">
+      <div class="logo">LOGO</div>
+      <ul class="menu">
+        <li>菜单一</li>
+        <li>菜单二</li>
+      </ul>
+    </div>
+</template>
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  setup() {
+    
+  },
+})
+</script>
+
+<style scoped lang='scss'>
+.topnav {
+  background: pink;
+  display: flex;
+  padding: 16px;
+  > .logo {
+    max-width: 6em;
+    margin-right: auto;
+  }
+  > .menu {
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    > li {
+      margin: 0 1em;
+    }
+  }
+}
+</style>
