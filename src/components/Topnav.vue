@@ -14,7 +14,6 @@ export default defineComponent({
   setup() {
     const asideVisible = inject('asideVisible')
     const toggleAside = () => {
-      console.log(1)
       asideVisible.value = !asideVisible.value
     }
     return {
