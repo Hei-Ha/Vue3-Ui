@@ -1,5 +1,5 @@
 <template>
-  <Switch :switchStatus="switchStatus" @input="switchStatus = $event" />
+  <Switch v-model:switchStatus="switchStatus" />
 </template>
 
 <script lang="ts">

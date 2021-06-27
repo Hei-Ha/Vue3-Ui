@@ -14,7 +14,7 @@ export default {
   },
   setup(props, context) {
     const toggle = () => {
-      context.emit('input', !props.switchStatus)
+      context.emit('update:switchStatus', !props.switchStatus)
     }
     return {
       toggle
@@ -33,7 +33,7 @@ button {
   height: $h;
   width: $h * 2;
   border: none;
-  background: gray;
+  background: #bfbfbf;
   border-radius: math.div($h, 2);
 }
 span {
@@ -44,14 +44,21 @@ span {
   width: $h2;
   background: white;
   border-radius: math.div($h2, 2);
-  transition: 250ms;
+  transition: all 250ms;
 }
 
 button.checked {
-  background: blue;
+  background: #1890ff;
 }
 
 button.checked > span {
   left: calc(100% - #{$h2} - 2px);
+}
+
+button:active{
+  > span {width: $h2 + 4px;}
+}
+button.checked:active{
+  > span {width: $h2 + 4px; margin-left: -4px;}
 }
 </style>
