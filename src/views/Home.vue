@@ -24,6 +24,8 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
+@use 'sass:math';
+
 .banner {
   padding: 100px 0;
   display: flex;
@@ -40,7 +42,7 @@ export default defineComponent({
       $h: 28px;
       height: $h;
       line-height: $h;
-      border-radius: $h/2;
+      border-radius: math.div($h, 2);
       padding: 0 8px;
     }
   }
