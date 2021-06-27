@@ -1,20 +1,22 @@
 <template>
-  <button :class="{checked: checked}" @click="toggle">
-    <span></span>
+  <button :class="{checked: switchStatus}" @click="toggle">
+    <span />
   </button>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
 export default {
   name: 'switch.vue',
-  setup() {
-    const checked = ref(false)
+  props: {
+    switchStatus: {
+      type: Boolean
+    }
+  },
+  setup(props, context) {
     const toggle = () => {
-      checked.value = !checked.value
+      context.emit('input', !props.switchStatus)
     }
     return {
-      checked,
       toggle
    }
   }
@@ -42,6 +44,7 @@ span {
   width: $h2;
   background: white;
   border-radius: math.div($h2, 2);
+  transition: 250ms;
 }
 
 button.checked {
