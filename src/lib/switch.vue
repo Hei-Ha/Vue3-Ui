@@ -35,30 +35,31 @@ button {
   border: none;
   background: #bfbfbf;
   border-radius: math.div($h, 2);
-}
-span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: $h2;
-  width: $h2;
-  background: white;
-  border-radius: math.div($h2, 2);
-  transition: all 250ms;
-}
 
-button.checked {
-  background: #1890ff;
-}
+  span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $h2;
+    width: $h2;
+    background: white;
+    border-radius: math.div($h2, 2);
+    transition: all 250ms;
+  }
 
-button.checked > span {
-  left: calc(100% - #{$h2} - 2px);
-}
+  &.checked {
+    background: #1890ff;
+  }
 
-button:active{
-  > span {width: $h2 + 4px;}
-}
-button.checked:active{
-  > span {width: $h2 + 4px; margin-left: -4px;}
+  &.checked > span {
+    left: calc(100% - #{$h2} - 2px);
+  }
+
+  &:active{
+    > span {width: $h2 + 4px;}
+  }
+  &.checked:active{
+    > span {width: $h2 + 4px; margin-left: -4px;}
+  }
 }
 </style>
