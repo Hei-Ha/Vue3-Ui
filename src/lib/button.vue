@@ -2,13 +2,14 @@
   <!--  vue 会默认把外面穿进来的方法传到这里的最外面的标签上（这里是  div）-->
   <!--  可以使用 $attrs 获取事件再重新赋值给想要的元素 -->
   <div>
-    <button v-bind="$attrs" class="W-button" :class="`WTheme-${theme}`">
+    <button v-bind="$attrs" class="W-button" :class="classes">
       <slot />
     </button>
   </div>
 </template>
 
 <script lang="ts">
+import { computed } from 'vue'
 export default {
   inheritAttrs: false,
   name: "button",
@@ -16,8 +17,24 @@ export default {
     theme: {
       type: String,
       default: 'button'
+    },
+    size: {
+      type: String,
+      default: 'normal'
     }
   },
+  setup(props) {
+    const classes = computed( () => {
+      return {
+        [`W-theme-${props.theme}`]: props.theme,
+        [`W-size-${props.size}`]: props.size,
+      }
+    })
+
+    return {
+      classes
+    }
+  }
 }
 </script>
 
@@ -58,6 +75,37 @@ $radius: 4px;
 
   &::-moz-focus-inner {
     border: 0;
+  }
+  //支持 theme 属性
+  &.W-theme-link{
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,
+    &:focus{
+      color: lighten($blue, 10%);
+    }
+  }
+  &.W-theme-text{
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &:hover,
+    &:focus{
+      background: darken(white, 5%);;
+    }
+  }
+  // 支持 size 属性
+  &.W-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px
+  }
+
+  &.W-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
   }
 }
 </style>
