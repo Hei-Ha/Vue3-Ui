@@ -1,5 +1,5 @@
 <template>
-  <button :class="{checked: switchStatus}" @click="toggle">
+  <button class="W-switch" :class="{'W-checked': switchStatus}" @click="toggle">
     <span />
   </button>
 </template>
@@ -23,12 +23,12 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use 'sass:math';
 
 $h: 22px;
 $h2: $h - 4px;
-button {
+.W-switch {
   position: relative;
   height: $h;
   width: $h * 2;
@@ -47,18 +47,18 @@ button {
     transition: all 250ms;
   }
 
-  &.checked {
+  &.W-checked {
     background: #1890ff;
   }
 
-  &.checked > span {
+  &.W-checked > span {
     left: calc(100% - #{$h2} - 2px);
   }
 
   &:active{
     > span {width: $h2 + 4px;}
   }
-  &.checked:active{
+  &.W-checked:active{
     > span {width: $h2 + 4px; margin-left: -4px;}
   }
 }

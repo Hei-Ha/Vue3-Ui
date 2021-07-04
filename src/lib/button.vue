@@ -2,7 +2,7 @@
   <!--  vue 会默认把外面穿进来的方法传到这里的最外面的标签上（这里是  div）-->
   <!--  可以使用 $attrs 获取事件再重新赋值给想要的元素 -->
   <div>
-    <button v-bind="$attrs" class="WButton" :class="`theme-${theme}`">
+    <button v-bind="$attrs" class="W-button" :class="`WTheme-${theme}`">
       <slot />
     </button>
   </div>
@@ -21,13 +21,13 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
-.WButton {
+.W-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
