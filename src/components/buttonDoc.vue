@@ -12,6 +12,14 @@
     <WButton :size="'normal'">正常</WButton>
     <WButton :size="'big'">大</WButton>
   </div>
+  <div>
+    <h1>实例3 disabled</h1>
+    <WButton :disabled="true">禁用</WButton>
+  </div>
+  <div>
+    <h1>实例4 load</h1>
+    <WButton :loading="true">加载中</WButton>
+  </div>
 </template>
 
 <script lang="ts">

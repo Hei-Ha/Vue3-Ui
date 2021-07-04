@@ -2,7 +2,8 @@
   <!--  vue 会默认把外面穿进来的方法传到这里的最外面的标签上（这里是  div）-->
   <!--  可以使用 $attrs 获取事件再重新赋值给想要的元素 -->
   <div>
-    <button v-bind="$attrs" class="W-button" :class="classes">
+    <button v-bind="$attrs" class="W-button" :class="classes" :disabled="disabled">
+      <span v-if="loading" class="gulu-loadingIndicator"></span>
       <slot />
     </button>
   </div>
@@ -25,6 +26,14 @@ export default {
     level: {
       type: String,
       default: 'normal'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -32,6 +41,7 @@ export default {
       return {
         [`W-theme-${props.theme}`]: props.theme,
         [`W-size-${props.size}`]: props.size,
+        [`W-level-${props.level}`]: props.level,
       }
     })
 
@@ -47,6 +57,8 @@ $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
+$red: red;
+$grey: grey;
 $radius: 4px;
 .W-button {
   box-sizing: border-box;
@@ -160,5 +172,37 @@ $radius: 4px;
       }
     }
   }
+  // 支持 disabled
+  &.W-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.W-theme-link, &.W-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
+  // loading
+  > .gulu-loadingIndicator{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: gulu-spin 1s infinite linear;
+  }
+}
+@keyframes gulu-spin {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
 }
 </style>
