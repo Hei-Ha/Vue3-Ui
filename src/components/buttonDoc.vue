@@ -1,12 +1,18 @@
 <template>
   <div>
-    buttonDoc
+    <WButton>
+      你好
+    </WButton>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import WButton from '../lib/button.vue'
 export default {
-name: "buttonDoc"
+  name: "buttonDoc",
+  components: {
+    WButton
+  }
 }
 </script>
 
