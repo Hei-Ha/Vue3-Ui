@@ -1,12 +1,17 @@
 <template>
   <div>
-    dialogDoc
+    <h1>示例： 1</h1>
+    <WDialog></WDialog>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import WDialog from '../lib/dialog.vue'
 export default {
-  name: "dialogDoc"
+  name: "dialogDoc",
+  components: {
+    WDialog
+  }
 }
 </script>
 
