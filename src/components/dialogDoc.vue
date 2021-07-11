@@ -5,7 +5,14 @@
     <WDialog
       v-model:visible="visibleDialog"
       :submit="submit"
-      :cancel="cancel"></WDialog>
+      :cancel="cancel">
+      <template v-slot:header>
+        这里是标题
+      </template>
+      <template v-slot:content>
+        这里是content
+      </template>
+    </WDialog>
   </div>
 </template>
 

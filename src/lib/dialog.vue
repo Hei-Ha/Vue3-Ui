@@ -3,12 +3,12 @@
     <div class="W-dialog-overlay" @click="onClickOverlay"></div>
     <div class="W-dialog-wrapper">
       <div class=" W-dialog ">
-        <header> 标题
+        <header>
+          <slot name="header"/>
           <span @click="close" class="W-dialog-close" />
         </header>
         <main>
-          <p>一</p>
-          <p>二</p>
+          <slot name="content" />
         </main>
         <footer>
           <WButton class="W-footer-Btn" level="main" @click="submitBtn">确定</WButton>
