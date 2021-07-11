@@ -1,18 +1,22 @@
 <template>
-  <div class="W-dialog-overlay"></div>
-  <div class="W-dialog-wrapper">
-    <div class=" W-dialog ">
-      <header> 标题 <span class="W-dialog-close"></span></header>
-      <main>
-        <p>一</p>
-        <p>二</p>
-      </main>
-      <footer>
-        <WButton class="W-footer-Btn" level="main">确定</WButton>
-        <WButton class="W-footer-Btn">取消</WButton>
-      </footer>
+  <template v-if="visible">
+    <div class="W-dialog-overlay" @click="onClickOverlay"></div>
+    <div class="W-dialog-wrapper">
+      <div class=" W-dialog ">
+        <header> 标题
+          <span @click="close" class="W-dialog-close" />
+        </header>
+        <main>
+          <p>一</p>
+          <p>二</p>
+        </main>
+        <footer>
+          <WButton class="W-footer-Btn" level="main" @click="submitBtn">确定</WButton>
+          <WButton class="W-footer-Btn" @click="cancelBtn">取消</WButton>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 
 <script>
@@ -27,8 +31,45 @@ export default {
       type: Boolean,
       default: false
     },
-    title: {
-      Type: String
+    closeOnOverlay: { // 是否点击遮罩层，关闭弹窗
+      type: Boolean,
+      default: true
+    },
+    submit: {
+      type: Function
+    },
+    cancel: {
+      type: Function
+    }
+  },
+  setup(props, context) {
+    // 关闭弹窗
+    const close = () => {
+      context.emit('update:visible', !props.visible)
+    }
+    // 点击遮罩层是否关闭弹窗
+    const onClickOverlay = () => {
+      if (props.closeOnOverlay) {
+        close()
+      }
+    }
+    // 确认按钮
+    const submitBtn = () => {
+      if (props.submit && props.submit() !== false) {
+        close()
+      }
+    }
+    // 取消按钮
+    const cancelBtn = () => {
+      if (props.cancel && props.cancel() !== false) {
+        close()
+      }
+    }
+    return {
+      close,
+      onClickOverlay,
+      cancelBtn,
+      submitBtn
     }
   }
 }
