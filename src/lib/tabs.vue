@@ -4,13 +4,14 @@
       <div class="W-tabs-nav-item" :class="{selected: t === selected}" v-for="(t, index) in titles" :key="t + index" @click="select(t)">{{ t }}</div>
     </div>
     <div class="W-tabs-content">
-      <component class="W-tabs-content-item" :is="current" />
+<!--      <component class="W-tabs-content-item" :is="current" />-->
+      <component class="W-tabs-content-item" v-for="(c, index) in defaults" :key="index + c" :is="c" :class="{selected: c.props.title === selected}" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+// import { computed } from 'vue'
 import Tab from './tab.vue'
 
 export default {
@@ -31,11 +32,11 @@ export default {
       return item.props.title
     })
     // 渲染内容
-    const current = computed(() => {
-      return defaults.filter((tag) => {
-        return tag.props.title === props.selected
-      })[0]
-    })
+    // const current = computed(() => {
+    //   return defaults.filter((tag) => {
+    //     return tag.props.title === props.selected
+    //   })[0]
+    // })
     // title 点击事件函数
     const select = (t: string) => {
       context.emit('update:selected', t)
@@ -43,14 +44,14 @@ export default {
     return {
       defaults,
       titles,
-      current,
+      // current,
       select
     }
   }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
@@ -72,7 +73,15 @@ $border-color: #d9d9d9;
     }
   }
   &-content {
-     padding: 8px 0;
+    padding: 8px 0;
+
+    &-item {
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+    }
    }
 }
 </style>
