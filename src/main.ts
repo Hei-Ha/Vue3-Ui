@@ -1,5 +1,6 @@
 import './lib/lib.scss'
 import './index.scss'
+import 'github-markdown-css'
 
 import { createApp } from 'vue'
 import App from './App.vue'

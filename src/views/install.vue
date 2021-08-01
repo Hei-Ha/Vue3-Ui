@@ -1,6 +1,7 @@
 <template>
-  <div>
-    安装
+  <div class="markdown-body">
+    <h1>安装</h1>
+    <pre><code>hello word</code></pre>
   </div>
 </template>
 
