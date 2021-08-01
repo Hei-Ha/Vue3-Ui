@@ -21,9 +21,9 @@
     to-fast-properties "^2.0.0"
 
 "@vitejs/plugin-vue@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.nlark.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.2.2.tgz#b0038fc11b9099f4cd01fcbf0ee419adda417b52"
-  integrity sha1-sAOPwRuQmfTNAfy/DuQZrdpBe1I=
+  version "1.3.0"
+  resolved "https://registry.nlark.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.3.0.tgz?cache=0&sync_timestamp=1627380089453&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vitejs%2Fplugin-vue%2Fdownload%2F%40vitejs%2Fplugin-vue-1.3.0.tgz#fc89a6c9b5a5157916afece4edc8fb55bf1bbc42"
+  integrity sha1-/ImmybWlFXkWr+zk7cj7Vb8bvEI=
 
 "@vue/compiler-core@3.0.11":
   version "3.0.11"
