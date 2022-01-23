@@ -1,14 +1,18 @@
 <template>
   <div class="topnav">
     <router-link to="/" class="logo">
-      <svg class="icon" aria-hidden="true">
+      <svg class="icon">
         <use xlink:href="#icon-gexing"></use>
       </svg>
     </router-link>
     <ul class="menu">
       <router-link to="/doc">文档</router-link>
     </ul>
-    <span v-show="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside" />
+    <span v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
+      <svg class="icon">
+        <use xlink:href="#icon-hanbaocaidanzhedie"></use>
+      </svg>
+    </span>
   </div>
 </template>
 <script>
@@ -66,7 +70,6 @@ export default defineComponent({
     display: none;
     width: 24px;
     height: 24px;
-    background: red;
     position: absolute;
     left: 16px;
     top: 50%;
