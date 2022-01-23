@@ -6,7 +6,9 @@
         :class="{selected: t === selected}"
         v-for="(t, index) in titles"
         :key="t + index"
-        :ref="el => {if (t === selected) selectedItem = el}"
+        :ref="el => {if (t === selected) {
+          selectedItem = el
+         }}"
         @click="select(t)"
       >
         {{ t }}
@@ -14,7 +16,7 @@
       <div
         class="W-tabs-nav-indicator"
         ref="indicator"
-      />
+      /> <!--    导航下面的横线-->
     </div>
     <div class="W-tabs-content">
       <component :is="current" :key="current.props.title" />
@@ -50,25 +52,13 @@ export default {
     })
 
     onMounted(() => {
-      const { width } = selectedItem.value.getBoundingClientRect()
-      indicator.value.style.width = width + 'px'
-      const { left:containerLeft } = container.value.getBoundingClientRect()
-      const { left } = selectedItem.value.getBoundingClientRect()
-      indicator.value.style.left = (left - containerLeft) + 'px'
-      // watchEffect(() => {
-      //   const { width } = selectedItem.value.getBoundingClientRect()
-      //   indicator.value.style.width = width + 'px'
-      //   const { left:containerLeft } = container.value.getBoundingClientRect()
-      //   const { left } = selectedItem.value.getBoundingClientRect()
-      //   indicator.value.style.left = (left - containerLeft) + 'px'
-      // })
-    })
-    onUpdated(() => {
-      const { width } = selectedItem.value.getBoundingClientRect()
-      indicator.value.style.width = width + 'px'
-      const { left:containerLeft } = container.value.getBoundingClientRect()
-      const { left } = selectedItem.value.getBoundingClientRect()
-      indicator.value.style.left = (left - containerLeft) + 'px'
+      watchEffect( () => {
+        const { width } = selectedItem.value.getBoundingClientRect()
+        indicator.value.style.width = width + 'px'
+        const { left:containerLeft } = container.value.getBoundingClientRect()
+        const { left } = selectedItem.value.getBoundingClientRect()
+        indicator.value.style.left = (left - containerLeft) + 'px'
+      })
     })
 
     const titles = defaults.map((item) => {
