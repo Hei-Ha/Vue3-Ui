@@ -2,8 +2,8 @@
   <div>
     <h1>示例1</h1>
     <Tabs v-model:selected="selectTitle">
-      <Tab title="title1">nihao</Tab>
-      <Tab title="title2">haha</Tab>
+      <Tab title="title1">Tab1</Tab>
+      <Tab title="title2">Tab2</Tab>
     </Tabs>
   </div>
 </template>
