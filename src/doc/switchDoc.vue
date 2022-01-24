@@ -1,5 +1,9 @@
 <template>
   <Switch v-model:switchStatus="switchStatus" />
+  <div>
+    组件示例
+  </div>
+
 </template>
 
 <script lang="ts">

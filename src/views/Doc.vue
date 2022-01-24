@@ -57,6 +57,7 @@ export default defineComponent({
   height: 100vh;
   > .nav {
     flex-shrink: 0;
+    z-index: 2;
   }
   > .content {
     flex-grow: 1;
@@ -86,8 +87,8 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  //padding-top: 70px;
   height: 100%;
+  z-index: 1;
 
   > h2 {
     margin-bottom: 4px;
