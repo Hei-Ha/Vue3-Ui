@@ -24,7 +24,7 @@
 <script>
 import WButton from './button.vue'
 export default {
-  name: 'dialog',
+  name: 'WDialog',
   components: {
     WButton
   },

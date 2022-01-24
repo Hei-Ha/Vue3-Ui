@@ -13,7 +13,7 @@
 import { computed } from 'vue'
 export default {
   inheritAttrs: false,
-  name: "button",
+  name: "WButton",
   props: {
     theme: {
       type: String,
