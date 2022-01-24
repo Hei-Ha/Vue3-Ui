@@ -7,6 +7,7 @@
     <p>或</p>
     <h3>yarn 安装</h3>
     <pre><code>yarn add</code></pre>
+    <text>如果你的网络环境不佳，推荐使用 cnpm</text>
   </div>
 </template>
 

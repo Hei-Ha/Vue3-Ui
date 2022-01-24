@@ -97,6 +97,7 @@ aside {
         display: block;
         padding: 4px 16px;
         text-decoration: none;
+        margin: 5px 0;
       }
       .router-link-active {
         background: #ffffff;

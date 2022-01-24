@@ -1,7 +1,16 @@
 <template>
   <div class="markdown-body">
     <h1>简介</h1>
-    <p>这是一个 基于 vue3 + vite 的组件库</p>
+    <h3>特性</h3>
+    <ul>
+      <li>简介的视觉风格</li>
+      <li>开箱即用的高质量 Vue 组件</li>
+    </ul>
+    <h3>支持环境</h3>
+    <ul>
+      <li>现代浏览器和 IE9 及以上（需要 polyfills）</li>
+    </ul>
+
   </div>
 </template>
 
