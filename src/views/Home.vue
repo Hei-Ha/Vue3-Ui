@@ -5,7 +5,7 @@
       <h1>自定义 vue3 组件</h1>
       <p class="actions">
         <a href="">Github</a>
-        <router-link to="/doc">开始</router-link>
+        <router-link to="/doc/install">开始</router-link>
       </p>
     </div>
     <div class="navigation">

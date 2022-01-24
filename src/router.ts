@@ -10,7 +10,6 @@ import SwitchDoc from "./views/doc/switchDoc.vue";
 import buttonDoc from './views/doc/buttonDoc.vue'
 import dialogDoc from './views/doc/dialogDoc.vue'
 import tabsDoc from './views/doc/tabsDoc.vue'
-import DocPage from './views/doc/docPage.vue'
 
 const history = createWebHashHistory()
 const routers = createRouter({
@@ -21,7 +20,6 @@ const routers = createRouter({
             path: '/doc',
             component: Doc,
             children: [
-                { path: '', component: DocPage },
                 { path: 'intro', component: intro },
                 { path: 'getStart', component: GetStart },
                 { path: 'install', component: Install },

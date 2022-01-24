@@ -6,7 +6,7 @@
       </svg>
     </router-link>
     <ul class="menu">
-      <router-link to="/doc">文档</router-link>
+      <router-link to="/doc/intro">文档</router-link>
     </ul>
     <span v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
       <svg class="icon">
