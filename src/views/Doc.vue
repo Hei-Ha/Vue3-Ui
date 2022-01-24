@@ -3,7 +3,6 @@
     <Topnav :toggleMenuButtonVisible="true" class="nav" />
     <div class="content">
       <aside v-show="asideVisible">
-        <h2>组件列表</h2>
         <ol>
           <li>
             <router-link to="/doc/intro">简介</router-link>
@@ -14,6 +13,7 @@
           <li>
             <router-link to="/doc/getStart">开始使用</router-link>
           </li>
+          <h2>组件列表</h2>
           <li>
             <router-link to="/doc/switch">switch 组件</router-link>
           </li>
@@ -36,7 +36,7 @@
 </template>
 <script>
 import { defineComponent, inject } from 'vue'
-import Topnav from '../doc/Topnav.vue'
+import Topnav from './doc/Topnav.vue'
 
 export default defineComponent({
   components: {
@@ -90,10 +90,6 @@ aside {
   height: 100%;
   z-index: 1;
 
-  > h2 {
-    margin-bottom: 4px;
-    padding: 0 16px;
-  }
 
   > ol {
     > li {
@@ -106,13 +102,16 @@ aside {
         background: #ffffff;
       }
     }
+
+    > h2 {
+      margin-bottom: 4px;
+      padding: 0 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
-  //@media (max-width: 500px) {
-  //  position: fixed;
-  //  top: 0;
-  //  left: 0;
-  //  padding-top: 70px;
-  //}
 }
 
 main {

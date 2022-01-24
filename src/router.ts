@@ -6,11 +6,11 @@ import intro from './views/intro.vue'
 import GetStart from './views/getStart.vue'
 import Install from './views/install.vue'
 
-import SwitchDoc from "./doc/switchDoc.vue";
-import buttonDoc from './doc/buttonDoc.vue'
-import dialogDoc from './doc/dialogDoc.vue'
-import tabsDoc from './doc/tabsDoc.vue'
-import DocPage from './doc/docPage.vue'
+import SwitchDoc from "./views/doc/switchDoc.vue";
+import buttonDoc from './views/doc/buttonDoc.vue'
+import dialogDoc from './views/doc/dialogDoc.vue'
+import tabsDoc from './views/doc/tabsDoc.vue'
+import DocPage from './views/doc/docPage.vue'
 
 const history = createWebHashHistory()
 const routers = createRouter({
