@@ -36,7 +36,7 @@
 </template>
 <script>
 import { defineComponent, inject } from 'vue'
-import Topnav from '../components/Topnav.vue'
+import Topnav from '../doc/Topnav.vue'
 
 export default defineComponent({
   components: {
