@@ -1,9 +1,12 @@
+<demo>
+  基础用法
+</demo>
 <template>
   <WSwitch v-model:switchStatus="switchValue" />
 </template>
 
-<script lang="ts">
-import WSwitch from '@/views/lib/switch.vue'
+<script>
+import WSwitch from '../lib/switch.vue'
 import { ref } from 'vue'
 
 export default {
@@ -12,10 +15,8 @@ export default {
   },
   setup() {
     const switchValue = ref(true)
-    const disabled = ref(false)
     return {
-      switchValue,
-      disabled
+      switchValue
     }
   }
 }

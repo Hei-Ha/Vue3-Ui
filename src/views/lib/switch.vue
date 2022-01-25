@@ -1,5 +1,5 @@
 <template>
-  <button class="W-switch" :class="{'W-checked': switchStatus}" @click="toggle">
+  <button class="W-switch" :class="{'W-checked': switchStatus, 'disabledBtn': disabled}" @click="toggle" :disabled="disabled">
     <span />
   </button>
 </template>
@@ -10,6 +10,10 @@ export default {
   props: {
     switchStatus: {
       type: Boolean
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, context) {
@@ -28,6 +32,7 @@ export default {
 
 $h: 22px;
 $h2: $h - 4px;
+
 .W-switch {
   position: relative;
   height: $h;
@@ -61,5 +66,9 @@ $h2: $h - 4px;
   &.W-checked:active{
     > span {width: $h2 + 4px; margin-left: -4px;}
   }
+}
+
+.disabledBtn {
+  cursor: not-allowed;
 }
 </style>

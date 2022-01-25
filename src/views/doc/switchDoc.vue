@@ -1,37 +1,24 @@
 <template>
   <h1>Switch 开关</h1>
   <p class="describe">开关选择器。</p>
-  <div class="demo1">
-    <section>
-      <SwitchDemo1 />
-    </section>
-    <div class="lineText">
-      <span class="line1" />
-      <h4>基础用法</h4>
-      <span class="line2" />
-    </div>
-    <div>
-<!--      <pre v-text="SwitchDemo1.__scopeId" />-->
-    </div>
-  </div>
+  <Example title="常规用法" :component="SwitchDemoCommon" />
+  <Example title="禁止状态" :component="SwitchDemoDisabled" />
 </template>
 
-<script lang="ts">
-import { ref } from "vue"
-import Switch from "@/views/lib/switch.vue"
-import SwitchDemo1 from '@/views/sourceCode/switch1.demo.vue'
+<script>
+import SwitchDemoCommon from '../../views/sourceCode/switchDemo.common.vue'
+import SwitchDemoDisabled from '../../views/sourceCode/switchDemo.disabled.vue'
+import Example from '../../components/example.vue'
 
 export default {
   name: "switchDoc",
   components: {
-    Switch,
-    SwitchDemo1
+    Example
   },
   setup() {
-    const switchStatus = ref(false)
     return {
-      switchStatus,
-      SwitchDemo1
+      SwitchDemoCommon,
+      SwitchDemoDisabled
     }
   },
 }
@@ -48,41 +35,5 @@ h3 {
 
 ul {
   list-style-type: square;
-}
-
-.demo1 {
-  max-width: 700px;
-  height: auto;
-  border: 1px solid #EBEDEF;
-  padding-top: 30px;
-
-  section {
-    margin-left: 20px;
-  }
-
-  .lineText {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    span {
-      height: 2px;
-      background: #EBEDEF;
-    }
-
-    .line1 {
-      width: 20px;
-    }
-    .line2 {
-      flex: 1;
-    }
-
-    h4 {
-      width: auto;
-      margin: 0 20px 0 5px;
-    }
-  }
 }
 </style>

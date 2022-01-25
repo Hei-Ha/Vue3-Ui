@@ -11,21 +11,21 @@
     <div class="navigation">
       <ul>
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-vue" />
           </svg>
           <h3>基于 Vue 3</h3>
           <p>使用了 Vue 3 Composition API</p>
         </li>
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-typescript-def" />
           </svg>
           <h3>基于 TypeScript </h3>
           <p>源代码采用 TypeScript 书写（非严格检查）</p>
         </li>
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-lightbulbenergysaving" />
           </svg>
           <h3>代码易读</h3>
