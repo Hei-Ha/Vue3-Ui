@@ -10,24 +10,30 @@
       <h4>基础用法</h4>
       <span class="line2" />
     </div>
+    <div>
+      <pre v-text="Switch1.__sourceCode" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { ref } from "vue"
-import Switch from "../lib/switch.vue"
-
+import Switch from "@/views/lib/switch.vue"
+import Switch1 from '@/views/sourceCode/switchDemo1.vue'
+console.log(Switch1)
 export default {
   name: "switchDoc",
+  components: {
+    Switch,
+    Switch1
+  },
   setup() {
     const switchStatus = ref(false)
     return {
-      switchStatus
+      switchStatus,
+      Switch1
     }
   },
-  components: {
-    Switch
-  }
 }
 </script>
 
