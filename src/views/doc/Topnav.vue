@@ -5,9 +5,6 @@
         <use xlink:href="#icon-home2"></use>
       </svg>
     </router-link>
-    <ul class="menu">
-      <router-link to="/doc/intro">文档</router-link>
-    </ul>
     <span v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
       <svg class="icon">
         <use xlink:href="#icon-hanbaocaidanzhedie"></use>
