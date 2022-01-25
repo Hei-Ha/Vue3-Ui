@@ -1,14 +1,12 @@
 <template>
-  <WSwitch v-model="switchValue" disabled />
+  <WSwitch v-model:switchStatus="switchValue" />
 </template>
 
 <script lang="ts">
+import WSwitch from '@/views/lib/switch.vue'
 import { ref } from 'vue'
-// import WSwitch from '@/views/lib/switch.vue'
-import WSwitch from '../lib/switch.vue'
 
 export default {
-  name: 'switchDemo1',
   components: {
     WSwitch
   },

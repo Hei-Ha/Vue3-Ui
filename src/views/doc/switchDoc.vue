@@ -3,7 +3,7 @@
   <p class="describe">开关选择器。</p>
   <div class="demo1">
     <section>
-      <Switch v-model:switchStatus="switchStatus" />
+      <SwitchDemo1 />
     </section>
     <div class="lineText">
       <span class="line1" />
@@ -11,7 +11,7 @@
       <span class="line2" />
     </div>
     <div>
-      <pre v-text="Switch1.__sourceCode" />
+<!--      <pre v-text="SwitchDemo1.__scopeId" />-->
     </div>
   </div>
 </template>
@@ -19,19 +19,19 @@
 <script lang="ts">
 import { ref } from "vue"
 import Switch from "@/views/lib/switch.vue"
-import Switch1 from '@/views/sourceCode/switchDemo1.vue'
-console.log(Switch1)
+import SwitchDemo1 from '@/views/sourceCode/switch1.demo.vue'
+
 export default {
   name: "switchDoc",
   components: {
     Switch,
-    Switch1
+    SwitchDemo1
   },
   setup() {
     const switchStatus = ref(false)
     return {
       switchStatus,
-      Switch1
+      SwitchDemo1
     }
   },
 }
