@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { computed } from 'vue'
+
 export default {
   inheritAttrs: false,
   name: "WButton",
