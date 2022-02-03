@@ -4,6 +4,8 @@ import fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
 
 export default {
+    assetsDir: 'assets',
+    base: './',
     plugins: [vue()],
     resolve: {
         alias: {
