@@ -1,4 +1,4 @@
-import './views/lib/lib.scss'
+import './lib.scss'
 import './index.scss'
 import 'github-markdown-css'
 
