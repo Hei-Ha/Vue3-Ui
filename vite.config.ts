@@ -2,11 +2,12 @@ import vue from '@vitejs/plugin-vue'
 import path from "path"
 import fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
+import { md } from './plugins/md'
 
 export default {
     assetsDir: 'assets',
     base: './',
-    plugins: [vue()],
+    plugins: [vue(), md()],
     resolve: {
         alias: {
             // 'vue': 'vue/dist/vue.esm-bundler.js',

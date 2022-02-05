@@ -2,7 +2,7 @@
   <div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
-      <h1>自定义 vue3 组件</h1>
+      <h1>vue3 练习</h1>
       <p class="actions">
         <a href="https://github.com/Hei-Ha/Vue3-Ui">Github</a>
         <router-link to="/doc/install">开始</router-link>
