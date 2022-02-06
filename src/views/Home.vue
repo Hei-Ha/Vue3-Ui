@@ -56,6 +56,7 @@ $green: #02bcb0;
 .topnavAndBanner {
   background: linear-gradient(145deg, rgb(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
+  z-index: 0;
 
   .banner {
     color: $textColor;
@@ -80,8 +81,9 @@ $green: #02bcb0;
   }
 
   .navigation {
+    z-index: 1;
     margin: 64px auto;
-    width: 400px;
+    //width: 400px;
     @media (min-width: 800px) {
       width: 800px;
     }
