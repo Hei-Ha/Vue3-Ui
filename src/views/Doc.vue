@@ -76,12 +76,14 @@ export default defineComponent({
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: white;
+    background: #FFFFFF;
   }
 }
 
 aside {
-  background: lightblue;
+  background: rgb(165,183,245);
+  background: linear-gradient(100deg, rgba(165,183,245,1) 0%, rgba(255,255,255,1) 100%);
+  //background: #C4CFF8;
   width: 150px;
   padding: 70px 0;
   position: fixed;
@@ -95,18 +97,18 @@ aside {
     > li {
       > a {
         display: block;
-        padding: 4px 16px;
+        padding: 4px 18px;
         text-decoration: none;
         margin: 5px 0;
       }
       .router-link-active {
-        background: #ffffff;
+        background: #FFFFFF;
       }
     }
 
     > h2 {
       margin-bottom: 4px;
-      padding: 0 16px;
+      padding: 0 6px;
 
       &:hover {
         cursor: pointer;

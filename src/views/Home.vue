@@ -50,12 +50,14 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 @use 'sass:math';
-$textColor: #28d1c9;
-$green: #02bcb0;
+$textColor: #030000;
+$btn: #250AE9;
 
 .topnavAndBanner {
-  background: linear-gradient(145deg, rgb(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
-  clip-path: ellipse(80% 60% at 50% 40%);
+  min-height: 500px;
+  background: rgb(165,183,245);
+  background: linear-gradient(137deg, rgba(165,183,245,1) 0%, rgba(255,255,255,1) 100%);
+  clip-path: ellipse(90% 60% at 50% 40%);
   z-index: 0;
 
   .banner {
@@ -70,7 +72,7 @@ $green: #02bcb0;
       a {
         margin:0 8px;
         color: #fff;
-        background: $green;
+        background: $btn;
         display: inline-block;
         padding: 8px 24px;
         border-radius: 4px;
@@ -81,6 +83,7 @@ $green: #02bcb0;
   }
 
   .navigation {
+    color: $textColor;
     z-index: 1;
     margin: 64px auto;
     //width: 400px;
