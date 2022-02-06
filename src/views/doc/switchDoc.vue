@@ -8,6 +8,7 @@
     <el-table-column prop="param" label="参数" min-width="180" />
     <el-table-column prop="des" label="说明" min-width="180" />
     <el-table-column prop="type" label="类型" min-width="180" />
+    <el-table-column prop="values" label="可选值" min-width="180" />
     <el-table-column prop="defaultValue" label="默认值" min-width="180" />
   </el-table>
 </template>
@@ -29,19 +30,22 @@ export default {
         param: 'model-value/v-model',
         des: '绑定值',
         type: 'boolean/string',
-        defaultValue: '——',
+        values: '—',
+        defaultValue: '—',
       },
       {
         param: 'disabled',
         des: '是否禁用',
         type: 'boolean',
+        values: '—',
         defaultValue: 'false',
       },
       {
         param: 'describeText',
         des: '描述',
         type: '文本',
-        defaultValue: '——',
+        values: '—',
+        defaultValue: '—',
       }
     ]
     return {
