@@ -82,8 +82,8 @@ export default defineComponent({
 
 aside {
   background: rgb(165,183,245);
-  background: linear-gradient(100deg, rgba(165,183,245,1) 0%, rgba(255,255,255,1) 100%);
-  //background: #C4CFF8;
+  background: linear-gradient(100deg, rgba(165,183,245,1) 0%, rgba(223,235,247,1) 100%);
+  //background: #DFEBF7;
   width: 150px;
   padding: 70px 0;
   position: fixed;
