@@ -57,6 +57,7 @@ export default {
   height: auto;
   border: 1px solid #EBEDEF;
   padding: 30px 20px;
+  margin-bottom: 15px;
 
 .icon {
   display: block;
