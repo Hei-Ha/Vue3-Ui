@@ -1,6 +1,6 @@
 <template>
   <h1>Button按钮</h1>
-  <p>常用的操作按钮</p>
+  <p class="describe">常用的操作按钮</p>
   <div class="example">
     <h2>基础用法</h2>
     <el-card shadow="never" class="elCard">
@@ -88,6 +88,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.describe {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 .example {
   margin-top: 20px;
   .elCard {

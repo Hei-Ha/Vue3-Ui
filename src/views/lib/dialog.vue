@@ -11,7 +11,7 @@
           <main>
             <slot name="content" />
           </main>
-          <footer>
+          <footer v-if="footerVisible">
             <WButton class="W-footer-Btn" level="main" @click="submitBtn">确定</WButton>
             <WButton class="W-footer-Btn" @click="cancelBtn">取消</WButton>
           </footer>
@@ -42,6 +42,10 @@ export default {
     },
     cancel: {
       type: Function
+    },
+    footerVisible: {
+      type: Boolean,
+      default: true
     }
   },
   setup(props, context) {

@@ -1,6 +1,6 @@
 <template>
   <h1>Switch 开关</h1>
-  <p class="describe">开关选择器。</p>
+  <p class="describe">表示两种相互对立的状态间的切换，多用于触发「开/关」。</p>
   <Example title="常规用法" :component="SwitchDemoCommon" />
   <Example title="禁止状态" :component="SwitchDemoDisabled" />
   <Example title="增加描述" :component="SwitchDemoDescribe" />
