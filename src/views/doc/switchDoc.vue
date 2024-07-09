@@ -13,49 +13,51 @@
   </el-table>
 </template>
 
-<script>
+<script setup>
 import SwitchDemoCommon from '../sourceCode/switchDemo.common.vue'
 import SwitchDemoDisabled from '../sourceCode/switchDemo.disabled.vue'
 import SwitchDemoDescribe from "../sourceCode/switchDemo.describe.vue"
 import Example from '../../components/example.vue'
 
-export default {
-  name: "switchDoc",
-  components: {
-    Example
-  },
-  setup() {
-    const tableData = [
-      {
+const tableData = [
+    {
         param: 'model-value/v-model',
         des: '绑定值',
         type: 'boolean/string',
         values: '—',
         defaultValue: '—',
-      },
-      {
+    },
+    {
         param: 'disabled',
         des: '是否禁用',
         type: 'boolean',
         values: '—',
         defaultValue: 'false',
-      },
-      {
+    },
+    {
         param: 'describeText',
         des: '描述',
         type: '文本',
         values: '—',
         defaultValue: '—',
-      }
-    ]
-    return {
-      tableData,
-      SwitchDemoCommon,
-      SwitchDemoDisabled,
-      SwitchDemoDescribe
     }
-  },
-}
+]
+
+// export default {
+//   name: "switchDoc",
+//   components: {
+//     Example
+//   },
+//   setup() {
+//
+//     return {
+//       tableData,
+//       SwitchDemoCommon,
+//       SwitchDemoDisabled,
+//       SwitchDemoDescribe
+//     }
+//   },
+// }
 </script>
 
 <style scoped lang="scss">

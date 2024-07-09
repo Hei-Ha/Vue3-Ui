@@ -1,25 +1,14 @@
 <demo>
-  基础用法
+基础用法
 </demo>
 <template>
-  <WSwitch v-model:switchStatus="switchValue" />
+    <WSwitch v-model:switchStatus="switchValue"></WSwitch>
 </template>
 
-<script>
-import WSwitch from '../lib/switch.vue'
+<script setup>
 import { ref } from 'vue'
-
-export default {
-  components: {
-    WSwitch
-  },
-  setup() {
-    const switchValue = ref(true)
-    return {
-      switchValue
-    }
-  }
-}
+import WSwitch from '../lib/switch.vue'
+const switchValue = ref(true)
 </script>
 
 <style scoped>
