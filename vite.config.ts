@@ -25,6 +25,7 @@ const transform = {
     },
 }
 export default defineConfig({
+    base: 'Vue3-Ui',
     server: {
         port: 3000,
     },
